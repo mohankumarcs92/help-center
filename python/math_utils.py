@@ -10,7 +10,10 @@ def multiply(a: float, b: float) -> float:
 def is_even(n: int) -> bool:
     """Return True if n is even."""
     return n % 2 == 0
-def factorial(n): if n == 0:
-return 1 result = 1
-for i in range(1, n + 1): result *= i
-return result
+def factorial(n: int) -> int:
+    if n < 0:
+        raise ValueError("n must be >= 0")
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    return result
